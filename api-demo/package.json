@@ -1,14 +1,17 @@
 {
-  "name": "globizora-api-demo",
+  "name": "globizora-api-service",
   "version": "1.0.0",
-  "description": "Demo API service for Globizora Inc company profile",
+  "description": "Globizora Inc production-ready API service for SaaS, analytics, and infrastructure applications",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "Globizora Inc",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0"
   }
 }

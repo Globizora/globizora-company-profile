@@ -1,0 +1,14 @@
+{
+  "name": "globizora-api-demo",
+  "version": "1.0.0",
+  "description": "Demo API service for Globizora Inc company profile",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Globizora Inc",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

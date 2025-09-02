@@ -1,11 +1,10 @@
-// Globizora Inc - API Demo
-// A simple Express.js server to demonstrate Globizora's fintech & blockchain API capability
+// Globizora Inc - API Demo (Enhanced)
+// Express.js server demonstrating Globizora's fintech & infrastructure API capability
 
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware for JSON
 app.use(express.json());
 
 // Root endpoint
@@ -18,21 +17,34 @@ app.get("/", (req, res) => {
   });
 });
 
-// Example: health check endpoint
+// Enhanced Status endpoint
 app.get("/status", (req, res) => {
   res.json({
     service: "Globizora API Demo",
+    company: "GLOBIZORA INC",
     status: "OK",
+    version: "1.0.0",
+    environment: "development",
     timestamp: new Date()
   });
 });
 
-// Example: sample token data (simulating blockchain API)
+// Company info endpoint
+app.get("/company", (req, res) => {
+  res.json({
+    name: "GLOBIZORA INC",
+    industry: "AI platforms, Internet infrastructure, Fintech, Media",
+    location: "Sheridan, Wyoming, USA",
+    email: "info@globizora.com"
+  });
+});
+
+// Token endpoint (mock)
 app.get("/token/:symbol", (req, res) => {
   const { symbol } = req.params;
   res.json({
     token: symbol.toUpperCase(),
-    price_usd: Math.random() * 10, // mock data
+    price_usd: Math.random() * 10,
     network: "Solana (demo)"
   });
 });

@@ -1,30 +1,54 @@
-# 🌐 Globizora Inc. - API Demo
+# 🌐 Globizora Inc. - API Service
 
-This directory contains a demo API service for **Globizora Inc.**.  
-The purpose is to showcase our **backend development capability** and demonstrate how our company can build **real-time APIs** for SaaS and infrastructure services.
+**Globizora Inc.** is a technology-driven company registered in **Wyoming, USA**.  
+We build **AI platforms, internet infrastructure, SaaS applications, and automation services**.  
+
+This repository demonstrates our **production-style API service**, developed with Node.js, Express.js, and MongoDB.  
+It includes authentication, subscription management, API key generation, and Stripe (sandbox) integration.
 
 ---
 
 ## 🚀 Features
 
-- RESTful API demo using [Express.js](https://expressjs.com/)  
-- `/company` → Returns company profile information  
-- `/status` → Health check endpoint  
-- `/data/:symbol` → Sample data endpoint (for demonstration)  
-- Designed for extensibility into **SaaS, analytics, and infrastructure services**  
+- **User Management**
+  - Register & login with JWT authentication
+  - Secure password hashing (bcrypt)
+  - User profile and subscription tracking  
+
+- **API Key Management**
+  - Generate API keys for secure API calls
+  - Track usage per user  
+
+- **Subscription & Payments**
+  - Plans: Free / Pro / Enterprise
+  - Integrated with Stripe (sandbox mode for demonstration)
+  - Webhook support for payment confirmation  
+
+- **Service Monitoring**
+  - `/status` → API health check  
+  - `/metrics` → System metrics & database status  
+
+- **Company Information**
+  - `/company` endpoint returns company profile & pricing info  
+
+- **Documentation**
+  - Swagger UI available at `/docs`
 
 ---
 
-## 📡 API Endpoints
+## 🏢 Company Information
 
-### `/status`
-Returns system health and metadata.
-```json
-{
-  "service": "Globizora API Demo",
-  "company": "GLOBIZORA INC",
-  "status": "OK",
-  "version": "1.0.0",
-  "environment": "development",
-  "timestamp": "2025-09-02T06:10:00.000Z"
-}
+- **Name:** GLOBIZORA INC  
+- **Industry:** AI platforms, SaaS, Internet infrastructure, Media  
+- **Headquarters:** Sheridan, Wyoming, USA  
+- **Email:** info@globizora.com  
+- **Established:** 2025  
+
+---
+
+## 📦 Installation & Setup
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/globizora/globizora-api-service.git
+cd globizora-api-service/api

@@ -1,33 +1,30 @@
-# 🌐 Globizora Inc. - Company Profile & API Demo
+# 🌐 Globizora Inc. - API Demo
 
-**Globizora Inc.** is a technology-driven company registered in **Wyoming, USA**.  
-We focus on **AI platforms, internet infrastructure, SaaS solutions, and digital media**.  
-This repository demonstrates our **backend service capabilities** using Node.js and Express, showcasing our ability to deliver **real-time APIs** for infrastructure and SaaS applications.
+This directory contains a demo API service for **Globizora Inc.**.  
+The purpose is to showcase our **backend development capability** and demonstrate how our company can build **real-time APIs** for SaaS and infrastructure services.
 
 ---
 
 ## 🚀 Features
 
-- **RESTful API Demo** built with [Express.js](https://expressjs.com/)  
-- **Company Information Endpoint** (`/company`)  
-- **Service Health Monitoring** (`/status`)  
-- **Sample Data API** (`/data/:symbol`)  
-- Designed to extend into **SaaS, analytics, and internet infrastructure services**  
+- RESTful API demo using [Express.js](https://expressjs.com/)  
+- `/company` → Returns company profile information  
+- `/status` → Health check endpoint  
+- `/data/:symbol` → Sample data endpoint (for demonstration)  
+- Designed for extensibility into **SaaS, analytics, and infrastructure services**  
 
 ---
 
-## 🏢 Company Information
+## 📡 API Endpoints
 
-- **Name:** GLOBIZORA INC  
-- **Industry:** AI platforms, Internet infrastructure, SaaS, Media  
-- **Headquarters:** Sheridan, Wyoming, USA  
-- **Email:** info@globizora.com  
-
----
-
-## 📦 Installation & Usage
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/globizora/globizora-company-profile.git
-cd globizora-company-profile/api-demo
+### `/status`
+Returns system health and metadata.
+```json
+{
+  "service": "Globizora API Demo",
+  "company": "GLOBIZORA INC",
+  "status": "OK",
+  "version": "1.0.0",
+  "environment": "development",
+  "timestamp": "2025-09-02T06:10:00.000Z"
+}

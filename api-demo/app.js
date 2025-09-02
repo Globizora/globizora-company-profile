@@ -1,13 +1,10 @@
-// Globizora Inc - API Demo (Enhanced)
-// Express.js server demonstrating Globizora's fintech & infrastructure API capability
-
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-// Root endpoint
+// Root
 app.get("/", (req, res) => {
   res.json({
     message: "Welcome to Globizora Inc API Demo",
@@ -17,7 +14,7 @@ app.get("/", (req, res) => {
   });
 });
 
-// Enhanced Status endpoint
+// Enhanced Status
 app.get("/status", (req, res) => {
   res.json({
     service: "Globizora API Demo",
@@ -29,7 +26,7 @@ app.get("/status", (req, res) => {
   });
 });
 
-// Company info endpoint
+// ✅ Company Info
 app.get("/company", (req, res) => {
   res.json({
     name: "GLOBIZORA INC",
@@ -39,7 +36,7 @@ app.get("/company", (req, res) => {
   });
 });
 
-// Token endpoint (mock)
+// Token mock
 app.get("/token/:symbol", (req, res) => {
   const { symbol } = req.params;
   res.json({
@@ -49,7 +46,7 @@ app.get("/token/:symbol", (req, res) => {
   });
 });
 
-// Start server
+// Start
 app.listen(PORT, () => {
   console.log(`Globizora API Demo is running at http://localhost:${PORT}`);
 });
